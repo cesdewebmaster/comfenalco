@@ -1,0 +1,8 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-header {
+    position: relative;
+    z-index: 30;
+}

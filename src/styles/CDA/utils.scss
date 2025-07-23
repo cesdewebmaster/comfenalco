@@ -1,0 +1,130 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cda-main-container {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include fromy($large) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @include fromy($xxx-large) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.section__title {
+  border-left: 2px solid $magenta;
+  padding: 3px 0 3px 8px;
+  color: var(--color-blackred__white);
+
+  h2 {
+    font-family: $roboto-black;
+    margin-bottom: 4px;
+    line-height: 21px;
+    font-size: 16px;
+  }
+  p {
+    font-size: size(14);
+    line-height: 19px;
+  }
+}
+
+.swal-cda-container {
+  font-family: $roboto-regular;
+
+  &.swal2-backdrop-show {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .swal2-popup {
+    width: 302px;
+    height: 325px;
+    padding: 14px 20px 32px 25px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 6px;
+
+    .swal2-close {
+      font-size: 30px;
+      color: #737373;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .swal2-title {
+      color: $magenta;
+      padding: 0;
+      font-size: size(18);
+      font-family: $roboto-black;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+
+    .swal2-html-container {
+      margin: 0;
+      font-size: size(14);
+      line-height: 1.5;
+      padding-right: 5px;
+    }
+    .swal2-actions {
+      .swal2-confirm {
+        width: 166px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: $magenta;
+        font-family: $roboto-bold;
+        font-size: size(14);
+      }
+    }
+
+    @include fromy($large) {
+      width: 496px;
+      height: 312px;
+      padding: 13.8px 19px 40px 56px;
+
+      .swal2-image {
+        width: 52px;
+        height: 52px;
+        transform: translateX(-19px);
+      }
+
+      .swal2-title {
+        font-size: size(19);
+        font-family: $roboto-black;
+        line-height: 25px;
+        margin-bottom: 10px;
+        padding-right: 37px;
+      }
+
+      .swal2-html-container {
+        font-size: size(15);
+        padding-right: 37px;
+      }
+
+      .swal2-actions {
+        .swal2-confirm {
+          width: 200px;
+          height: 42px;
+          font-size: size(15);
+          margin-right: 37px;
+        }
+      }
+    }
+  }
+}
+
+.szh-accordion__item-content {
+  transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

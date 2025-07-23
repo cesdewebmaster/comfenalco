@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.a-backdrop-blur {
+  display: none;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.18);
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 19;
+
+  &.show {
+    display: block;
+  }
+}

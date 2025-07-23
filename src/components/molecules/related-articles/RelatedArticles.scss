@@ -1,0 +1,55 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-related-articles {
+  h2 {
+    color: var(--color-charcoal-white);
+    font-family: $roboto-bold;
+    font-size: size(19);
+    margin-bottom: 16px;
+    line-height: 20px;
+  }
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      .bullet {
+        background-color: $magenta;
+      }
+      a {
+        color: $magenta;
+      }
+    }
+
+    .bullet {
+      background-color: var(--color-article-bullet);
+      border-radius: 50%;
+      min-width: 6px;
+      width: 7px;
+      height: 7px;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+
+    a {
+      color: var(--color-blackred-light__white);
+      text-decoration: underline;
+      font-family: $heebo-regular;
+    }
+  }
+
+  @include fromy($large) {
+    h2 {
+      font-size: size(24);
+    }
+  }
+}

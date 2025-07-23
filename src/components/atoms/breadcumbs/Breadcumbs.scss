@@ -1,0 +1,36 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.a-breadcumbs {
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    li {
+      max-width: 200px; // Ajusta el ancho máximo según sea necesario
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      a,
+      span {
+        color: var(--color-blackred-light__white);
+        margin-right: 3px;
+        font-size: size(13);
+        display: inline-block;
+        max-width: 100%; // Para asegurarse de que no exceda el contenedor
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:last-of-type {
+        a {
+          font-family: $roboto-bold;
+        }
+      }
+    }
+  }
+}

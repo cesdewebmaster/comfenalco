@@ -1,0 +1,301 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-footer {
+  background-color: $magenta;
+  box-shadow: 0px 1px 6px #00000029;
+  padding-bottom: 32px;
+
+  .a-accordions__item {
+    .a-accordions__item-action {
+      cursor: pointer;
+      border-top: 1px solid $zinc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      p {
+        color: $white;
+        font-family: $roboto-medium;
+        font-size: size(14);
+
+        &:last-of-type {
+          color: $white;
+          font-family: $roboto-black;
+          font-size: size(20);
+        }
+      }
+    }
+
+    .a-accordions__item-content {
+      overflow-y: hidden;
+      height: 0;
+      transition: height 0.3s ease;
+
+      a {
+        display: block;
+        margin-bottom: 16px;
+        color: $white;
+        font-size: size(13);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--open {
+      .a-accordions__item-action {
+        p:first-of-type {
+          color: $white;
+        }
+      }
+      .a-accordions__item-content {
+        height: auto;
+        border-top: 1px solid $zinc;
+        padding-top: 8px;
+        padding-bottom: 24px;
+      }
+    }
+  }
+
+  .m-footer__networks,
+  .m-footer__pacts {
+    // border-top: 1px solid $zinc;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    p {
+      color: $white;
+      font-family: $roboto-medium;
+      margin-bottom: 10px;
+    }
+  }
+
+  .m-footer__networks {
+    border-top: 1px solid $zinc;
+    .a-networks__icons {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 16px;
+      
+      img {
+        // Puedes agregar filtros o efectos aquí si lo necesitas
+      }
+    }
+  }
+
+  .m-footer__pacts {
+    position: relative;
+
+    p {
+      width: 255px;
+    }
+
+    .pacts-box {
+      position: absolute; /* Posiciona este div con respecto al contenedor padre */
+      right: 0; /* Alinea el contenedor a la derecha */
+      bottom: 0; /* Alinea el contenedor al final del footer */
+      display: flex;
+      justify-content: center; /* Centra el contenido del contenedor horizontalmente */
+      align-items: center; /* Centra el contenido verticalmente */
+      transform: rotate(270deg); /* Mantén la rotación de la imagen */
+      transform-origin: top right; /* Ajusta el origen de la rotación */
+      
+      a {
+        img {
+          width: 200px;
+        }
+      }
+
+      // Estilos para pantallas pequeñas
+      @media (max-width: 768px) {
+        position: absolute; /* Fija el logo en el footer en pantallas pequeñas */
+        bottom: 165px; /* Ajusta la posición del logo en el pie de página */
+        // right: 20px; /* Posiciónalo hacia la derecha */
+        transform: rotate(270deg); /* Mantén la rotación */
+        transform-origin: bottom right; /* Ajusta el origen de la rotación */
+        width: 200px;
+
+        a {
+          img {
+              width: 125px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+              margin: 0 auto; /* Centra la imagen */
+          }
+      }
+      }
+    }
+  }
+
+  .m-footer__final-content {
+    border-top: 1px solid $zinc;
+    padding-top: 20px;
+
+    .final-content__actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .logos-descarga {
+        a {
+          margin: 0 10px;
+          img {
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      button {
+        background-color: var(--color-white-black);
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        transition: background-color 0.3s ease;
+        opacity: 0.5;
+
+        img {
+          width: 16px;
+          height: 17px;
+        }
+
+        &.fixed-on-internal {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          opacity: 1;
+
+          @include fromy($large) {
+            position: static;
+          }
+        }
+
+        &:hover {
+          background-color: $white;
+          img {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .final-content__texts {
+      margin-top: 20px;
+      text-align: center;
+      
+      small {
+        font-family: $roboto-black;
+        font-size: size(10);
+        color: $white;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 14px;
+      }
+    }
+  }
+
+  // -- DESKTOP --
+  @include fromy($xx-large) {
+    .m-footer__desktop-divider {
+      display: flex;
+      align-items: flex-start;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 48px;
+      padding-right: 48px;
+      padding-top: 24px;
+      padding-bottom: 60px;
+      column-gap: 66px;
+
+      .cda-main-container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .m-footer__accordions {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 60px;
+      
+      .a-accordions__item {
+        .a-accordions__item-action {
+          pointer-events: none;
+          border-top: none;
+          padding-top: 0;
+          padding-bottom: 14px;
+          
+          p {
+            font-family: $roboto-regular;
+            font-size: size(20);
+            &:last-of-type {
+              display: none;
+            }
+          }
+        }
+        .a-accordions__item-content {
+          height: auto;
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .m-footer__networks,
+    .m-footer__pacts {
+      border-top: none;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .m-footer__networks {
+      p {
+        font-size: size(20);
+        font-family: $roboto-regular;
+        padding-bottom: 20px;
+      }
+    }
+
+    .m-footer__pacts {
+      border-bottom: none;
+
+      p {
+        // Ajustes específicos para el texto del footer
+      }
+    }
+
+    .m-footer__final-content {
+      .final-content__actions {
+        img {
+          height: 30px;
+          width: 178px;
+        }
+        button {
+          width: 46px;
+          height: 46px;
+        }
+      }
+      .final-content__texts {
+        margin-top: 10px;
+
+        small {
+          display: inline-block;
+          margin-right: 20px;
+          margin-bottom: 0;
+          font-size: size(14);
+          font-family: $roboto-regular;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.a-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  column-gap: 26px;
+
+  button {
+    background: none;
+    font-family: $roboto-bold;
+    font-size: size(15);
+    color: var(--color-grayRadius__white);
+
+    &:disabled {
+      color: var(--color-grayRadius__white);
+    }
+
+    &.active {
+      color: $greenblue;
+    }
+  }
+
+  .pagination-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 18px;
+  }
+
+  @include fromy(1366px) {
+    margin-top: 63px;
+  }
+}

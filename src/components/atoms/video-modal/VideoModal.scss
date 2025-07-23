@@ -1,0 +1,46 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.a-video-modal {
+  background-color: #303030f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-super;
+
+  .close-modal-icon {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+    display: none;
+
+    @include fromy($x-large) {
+      display: block;
+      width: 70%;
+    }
+
+    img {
+      cursor: pointer;
+      filter: brightness(100);
+      margin-left: auto;
+      height: 23px;
+    }
+  }
+
+  .a-video-modal__player {
+    width: 100%;
+    height: 40vh;
+
+    @include fromy($x-large) {
+      width: 70%;
+      height: 80vh;
+    }
+  }
+}

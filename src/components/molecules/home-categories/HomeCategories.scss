@@ -1,0 +1,20 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-home-categories__container {
+  background-color: var(--color-white-onyx);
+
+  .m-home-categories {
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+    // @include fromy($xx-large) {
+    //   padding-top: 65px;
+    // }
+    @include fromy($xx-large) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

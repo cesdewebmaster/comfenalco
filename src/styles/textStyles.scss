@@ -1,0 +1,31 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.title-primary {
+    font-size: size(48);
+    font-family: $roboto-bold;
+    margin-bottom: size(30);
+    color: var(--color-dark-white);
+
+    @include from($small) {
+        font-size: size(30);
+        line-height: size(33);
+    }
+}
+
+.title-secondary {
+    font-size: size(45);
+    font-family: $roboto-bold;
+    margin-bottom: size(30);
+    color: var(--color-dark-white);
+
+    @include from($small) {
+        font-size: size(30);
+        line-height: size(33);
+    }
+}
+
+.text-primary {
+    font-size: size(17);
+    font-family: $roboto-bold;
+}

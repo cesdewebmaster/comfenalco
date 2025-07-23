@@ -1,0 +1,109 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.o-resultados-busqueda {
+  padding-top: 30px;
+  padding-bottom: 39px;
+  background-color: var(--color-sgray-onyx);
+  position: relative;
+
+  .a-breadcumb {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 6px;
+    font-size: size(13);
+    line-height: 25px;
+    color: var(--color-blackred-light__white);
+    margin-bottom: 48px;
+
+    .prev-link {
+      color: var(--color-blackred-light__white);
+    }
+
+    p {
+      font-family: $roboto-bold;
+    }
+  }
+
+  .m-search-results-box {
+    position: relative;
+    max-height: 250px;
+
+    @include fromy($large) {
+      max-height: 347px;
+    }
+  }
+
+  .m-results-section {
+    margin-top: 48px;
+
+    h2 {
+      font-family: $roboto-black;
+      font-size: size(21);
+      line-height: 28px;
+      color: var(--color-gray_x-white);
+      margin-bottom: 24px;
+    }
+
+    .m-results__subtitle {
+      font-family: $roboto-medium;
+      line-height: 19px;
+      color: var(--color-subheading-results-page);
+      margin-bottom: 48px;
+
+      &.m-results__subtitle--no-results {
+        margin-bottom: 24px;
+      }
+    }
+
+    .m-results__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 325px);
+      gap: 32px;
+    }
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      li {
+        font-size: size(14);
+        line-height: 21px;
+        color: var(--color-subheading-results-page);
+      }
+    }
+  }
+
+  @include fromy(1366px) {
+    .m-results-section {
+      margin-top: 56px;
+
+      h2 {
+        font-size: size(32);
+        line-height: 43px;
+        margin-bottom: 40px;
+      }
+
+      .m-results__subtitle {
+        font-size: size(20);
+        line-height: 26px;
+      }
+
+      .m-results__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 308px);
+        row-gap: 65px;
+        column-gap: 136px;
+      }
+
+      ol {
+        li {
+          font-size: size(16);
+        }
+      }
+    }
+  }
+}

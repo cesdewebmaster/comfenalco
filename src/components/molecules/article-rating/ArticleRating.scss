@@ -1,0 +1,133 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-rating-article {
+  padding-bottom: 40px;
+
+  .rating-box {
+    background-color: var(--article-rating-bg);
+    border-radius: 10px;
+    width: 247px;
+    height: 105px;
+    margin: 0 auto;
+    padding: 8px 22px 6px;
+
+    p {
+      color: var(--color-blackred__white);
+      font-family: $roboto-medium;
+      font-size: size(14);
+      line-height: 19px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .choices {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // column-gap: 59px;
+      text-align: center;
+
+      .choices__item {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        transition: all 0.3s ease;
+
+        &:first-of-type {
+          margin-right: 29.5px;
+        }
+
+        &:last-of-type {
+          margin-left: 29.5px;
+        }
+
+        button {
+          color: $blackred;
+          background-color: $white;
+          border-radius: 50%;
+          box-shadow: 0px 3px 6px #00000029;
+          font-size: 22px;
+          width: 38px;
+          height: 38px;
+          transition: all 0.2s ease;
+
+          i {
+            line-height: 40px;
+          }
+
+          &.choices__item--like {
+            transform: rotate(180deg);
+          }
+
+          &.selected-choice {
+            pointer-events: none;
+            color: $white;
+            background-color: #2072c9;
+          }
+
+          &:hover {
+            color: $white;
+            background-color: #2072c9;
+          }
+        }
+        small {
+          color: var(--color-grayplaceholder__white);
+          font-family: $roboto-bold;
+          font-size: size(14);
+          line-height: 19px;
+        }
+      }
+    }
+  }
+
+  @include fromy($large) {
+    padding-bottom: 48px;
+
+    .rating-box {
+      width: 100%;
+      height: 142px;
+      max-width: 668px;
+      padding-bottom: 13px;
+      margin: 0;
+
+      p {
+        font-size: size(20);
+        line-height: 26px;
+        margin-bottom: 23px;
+      }
+
+      .choices {
+        column-gap: 86px;
+
+        .choices__item {
+          row-gap: 8px;
+
+          &:first-of-type {
+            margin-right: 43px;
+          }
+
+          &:last-of-type {
+            margin-left: 43px;
+          }
+
+          button {
+            width: 45px;
+            height: 45px;
+            font-size: 28px;
+
+            i {
+              line-height: 50px;
+            }
+          }
+          small {
+            font-size: size(16);
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+}

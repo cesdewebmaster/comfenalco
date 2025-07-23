@@ -1,0 +1,204 @@
+/* Colors - Light theme */
+@mixin light-mode {
+  --color-mixed-black: #f8f8f8;
+  --color-black-white: #000000;
+  --color-coconut-black: #f9f9f9;
+  --color-coconut-charcoal: #f9f9f9;
+  --color-coconut-dark: #f9f9f9;
+  --color-bluish-white-dark: #f4f5fa;
+  --color-bluish-white-onyx: #f4f5fa;
+  --color-bluish-white-charcoal: #f4f5fa;
+  --color-coconut-onyx: #f9f9f9;
+  --color-coconut-faded_white: #f9f9f9;
+  --color-charcoal-white: #303030;
+  --color-charcoal-magenta: #303030;
+  --color-concrete-fadded: #595959;
+  --color-dark-concrete: #292929;
+  --color-dark-faded: #292929;
+  --color-dark-magenta: #292929;
+  --color-dark-white: #292929;
+  --color-dark-header: #292929;
+  --color-white-header: #ffffff;
+  --color-dove_gray-faded_gray: #6c6f84;
+  --color-faded-gray: #a0a0a0;
+  --color-faded-concrete: #a0a0a0;
+  --color-gray_border-dark: #6f7287;
+  --color-gray_border-white: #6f7287;
+  --color-gray-white: #3a3f58;
+  --color-gray-question__charcoal: #f1f1f1;
+  --color-gray_text-white: #3d3d3d;
+  --color-lilia-onyx: #eeeeee;
+  --color-lilia-charcoal: #eeeeee;
+  --color-lilia-metak_black: #eeeeee;
+  --color-lilac-gray: #d5dced;
+  --color-lilac-gray_white: #eef1f8;
+  --color-magenta-white: #6946bb;
+  --color-shadow-white: #575757;
+  --color-solid_gray-dark: #e2e3e7;
+  --color-zinc-azabache: #ededed;
+  --color-wheat-onyx: #fff4e7;
+  --color-white-black: #ffffff;
+  --color-white-charcoal: #ffffff;
+  --color-white-dark: #ffffff;
+  --color-white-onyx: #ffffff;
+  --color-yellow-dark: #ffe6de;
+  --color-gray-dark: #e3e5ee;
+  --color-shadow-dark: #eaeaea;
+  --color-shadow-white2: #eaeaea;
+  --color-menu_background1-black: #f7f7f7;
+  --color-menu_background2-black: #f9f9f9;
+  --color-light_blue_dark: #d5dced;
+  --color-light_blue_black: #d5dced;
+  --color-gray_x-white: #303030;
+  --color-gray__white: #6f7387;
+  --color-bluish-gray__white: #bebfc6;
+  --color-gray-title__white: #2e2e2e;
+  --color-greenblue__white: #2a9c9d;
+  --color-gray-tooltip__white: #9092a2;
+  --color-lilac__white: #8ba0d6;
+  --color-blackred__white: #4d4d4d;
+  --color-blackred-light__white: #535353;
+  --color-grayplaceholder__white: #737373;
+  --color-grayRadius__white: #888888;
+  --color-grayBorder__dark: #e2e3e7;
+  --color-f8-gray__azabache: #f8f8f8;
+  --color-f8-gray__charcoal: #f8f8f8;
+  --color-68-gray__white: #686868;
+  --filter-none-invert: none;
+  --filter-none-brightness: none;
+  --filter-white-black: brightness(0) invert(1);
+  --filter-none-white: none;
+
+  --color-ghost-white__charcoal: #e8ebf5;
+  --color-ghost-white__dark: #e8ebf5;
+  --color-dark__white__shadow: #00000019;
+  --color-sgray-onyx: #f8f8f8;
+  --color-magenta-strong: #6946bb;
+
+  --color-dark-blackred: #4b4b4b;
+  --color-bg-top-header: #fff;
+  --color-gray-top-header: #a1a1a1;
+  --color-dark-mixed-black: #f0f0f0;
+  --color-home-hover-subcategory: #fff;
+  --color-gray-black: #f8f8f8;
+  --color-hover-result-item: #f8f8f8;
+  --color-article-bullet: #b2b2b2;
+  --color-subheading-results-page: #656565;
+  --color-card-bg: #fff;
+  --color-lilia-dark: #eeeeee;
+  --article-rating-bg: #f8f8f8;
+}
+
+/* Colors - Dark theme */
+@mixin dark-mode {
+  --color-mixed-black: #464646;
+  --color-black-white: #ffffff;
+  --color-coconut-black: #000000;
+  --color-coconut-charcoal: #191919;
+  --color-ghost-white__charcoal: #191919;
+  --color-ghost-white__dark: #292929;
+  --color-coconut-dark: #292929;
+  --color-bluish-white-dark: #292929;
+  --color-bluish-white-onyx: #141414;
+  --color-bluish-white-charcoal: #191919;
+  --color-coconut-onyx: #141414;
+  --color-coconut-faded_white: #ffffff05;
+  --color-charcoal-white: #ffffff;
+  --color-charcoal-magenta: #6946bb;
+  --color-dark-concrete: #595959;
+  --color-dark-faded: #a0a0a0;
+  --color-dark-magenta: #6946bb;
+  --color-dark-white: #ffffff;
+  --color-dark-header: #171619;
+  --color-white-header: #292929;
+  --color-dove_gray-faded_gray: #a0a0a0;
+  --color-concrete-fadded: #a0a0a0;
+  --color-faded-concrete: #595959;
+  --color-faded-gray: #ffffff;
+  --color-gray_border-dark: #292929;
+  --color-gray_border-white: #ffffff;
+  --color-gray-white: #ffffff;
+  --color-gray-question__charcoal: #3e3e3e;
+  --color-gray_text-white: #fff;
+  --color-lilia-onyx: #141414;
+  --color-lilia-charcoal: #191919;
+  --color-lilia-metak_black: #3e3e3e;
+  --color-lilac-gray: #292929;
+  --color-lilac-gray_white: #141414;
+  --color-magenta-white: #ffffff;
+  --color-shadow-white: #ffffff;
+  --color-solid_gray-dark: #292929;
+  --color-wheat-onyx: #141414;
+  --color-white-black: #000000;
+  --color-white-charcoal: #191919;
+  --color-white-dark: #292929;
+  --color-white-onyx: #141414;
+  --color-zinc-azabache: #333333;
+  --color-yellow-dark: #333333;
+  --color-gray-dark: #000;
+  --color-shadow-dark: #3e3e3e;
+  --color-shadow-white2: #ffffff;
+  --color-menu_background1-black: #000;
+  --color-menu_background2-black: #000;
+  --color-light_blue_dark: #292929;
+  --color-light_blue_black: #000;
+  --color-gray_x-white: #fff;
+  --color-gray__white: #fff;
+  --color-bluish-gray__white: #ffffff;
+  --color-gray-title__white: #fff;
+  --color-greenblue__white: #fff;
+  --color-gray-tooltip__white: #fff;
+  --color-lilac__white: #fff;
+  --color-blackred__white: #ffffff;
+  --color-blackred-light__white: #ffffff;
+  --color-grayplaceholder__white: #ffffff;
+  --color-grayRadius__white: #ffffff;
+  --color-grayBorder__dark: #737373;
+  --color-f8-gray__azabache: #333333;
+  --color-f8-gray__charcoal: #191919;
+  --color-68-gray__white: #ffffff;
+  --filter-none-invert: invert(1);
+  --filter-none-brightness: brightness(500%);
+  --filter-white-black: brightness(0);
+  --filter-none-white: brightness(0) invert(1);
+  --color-dark__white__shadow: #ffffff19;
+  --color-sgray-onyx: #141414;
+  --color-magenta-strong: #6946bb;
+
+  --color-dark-blackred: #fff;
+  --color-bg-top-header: #262626;
+  --color-gray-top-header: #fff;
+  --color-dark-mixed-black: #464646;
+  --color-home-hover-subcategory: #252525;
+  --color-gray-black: #000;
+  --color-hover-result-item: #535252;
+  --color-article-bullet: #cfcfcf;
+  --color-subheading-results-page: #fff;
+  --color-card-bg: #282828;
+  --color-lilia-dark: #282828;
+  --article-rating-bg: #282828;
+}
+
+:root {
+  @include light-mode;
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include light-mode;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-mode;
+  }
+}

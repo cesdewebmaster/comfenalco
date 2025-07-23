@@ -1,0 +1,132 @@
+/* Fonts */
+$heebo-extrabold: "Heebo-ExtraBold";
+$heebo-bold: "Heebo-Bold";
+$heebo-medium: "Heebo-Medium";
+$heebo-regular: "Heebo-Regular";
+$heebo-light: "Heebo-Light";
+$roboto-bold: "Roboto-Bold";
+$roboto-medium: "Roboto-Medium";
+$roboto-regular: "Rubik";
+$roboto-black: "Harabara-Bold";
+
+/* Pixels to rem */
+$base-size: 16;
+
+@use "sass:math";
+
+@function size($target, $context: $base-size) {
+    @return math.div($target, $context) * 1rem;
+}
+
+/* Breakpoints */
+$s-small: 320px;
+$small: 440px;
+$s-medium: 570px;
+$medium: 768px;
+$large: 960px;
+$x-large: 1060px;
+$xx-large: 1250px;
+$xxx-large: 1440px;
+$high-quality: 1700px;
+
+/* Z-index */
+$z-back: -1;
+$z-none: 0;
+$z-floor: 1;
+$z-medium: 10;
+$z-up: 50;
+$z-top: 100;
+$z-super: 200;
+
+/* Site max width */
+$site-max-width: 1300px;
+
+/* Shadow */
+$shadow-primary: 0px 3px 12px #0000001f;
+
+/* Colors - Static*/
+$magenta: #6946bb;
+$magenta-light: #164194;
+$magenta-strong: #6946bb;
+$white: #ffffff;
+$coconut: #f9f9f9;
+$lilia: #eeeeee;
+$silver: #d5d5d5;
+$silver-light: #e6e6e6;
+$not-so-faded-gray: #888888;
+$faded-gray: #a0a0a0;
+$faded-black: #998a8a05;
+$dove-gray: #6c6f84;
+$dark-gray: #292929;
+$gray-border: #6f7287;
+$shadow: #575757;
+$shadow-light: #eaeaea;
+$charcoal: #191919;
+$onyx: #141414;
+$black: #000000;
+$black-light: #3a3f58;
+$border-silver: #00000029;
+$wheat: #fff4e7;
+$shadow-background: #ababab; // #E0E0E0;
+$solid-gray: #e2e3e7;
+$slate-gray: #6c6f86;
+$disabled-gray: #707070;
+$disabled-button-gray: #DBDBDB;
+$red: #e80c30;
+$red-bright: #FF0042;
+$concrete: #595959;
+$metal-black: #3e3e3e;
+$azabache: #333333;
+$zinc: #ededed;
+$gray-text: #3d3d3d;
+$gray-x: #303030;
+
+$greenblue: #2a9c9d;
+$greenblue-medium: #e30613;
+$greenblue-light: #a8dfe0;
+$green-bright: #86C000;
+$lilac: #8ba0d6;
+$lilac-light: #d5dced;
+$orange: #f87956;
+$orange-light: #ffe6de;
+$graybluish: #3a3f58;
+$graybluish-light: #bebfc6;
+$yellow: #fccd02;
+$yellow-bright: #ffbf00;
+$yellow-light: #fdf4df;
+$peach: #6946bb;
+$peach-light: #fde2e2;
+$blue: #35a0ba;
+$blue-light: #abd1da;
+$blue-note: #F0F3FF;
+$purple: #d19edd;
+$purple-light: #ddc8e2;
+$green: #229d8b;
+$green-light: #bad4cb;
+$alert: #f31147;
+$bluish-gray: #bebfc6;
+$blackred-dark: #272727;
+$blackred-light: #535353;
+$blackred: #4D4D4D;
+
+$magenta-bold:#164194;
+
+$dark-magenta: #402381;
+$dark-blackred: #4B4B4B;
+
+/* General Size */
+$size-section-margin-top: 20;
+$size-section-margin-bottom: 20;
+
+$size-font-title1: 90px;
+$size-font-title2: 45px;
+$size-font-title3: 32px;
+$size-font-title4: 22px;
+$size-font-title5: 20px;
+
+$size-font-text1: 18;
+$size-font-text2: 16;
+$size-font-text3: 14;
+
+$opacity: 0.66;
+/* Opacity */

@@ -1,0 +1,7 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+	<title>icon_plus-svg</title>
+	<style>
+		.s0 { fill: #303030 } 
+	</style>
+	<path id="Layer" class="s0" d="m51 31.1v1.8c0 1-0.9 1.9-1.9 1.9h-14.2v14.1c0 1.1-0.8 1.9-1.9 1.9h-1.7c-1 0-1.9-0.8-1.9-1.9v-14.1h-14.5c-1 0-1.9-0.9-1.9-1.9v-1.8c0-1 0.9-1.9 1.9-1.9h14.2v-14.3c0-1 0.8-1.9 1.9-1.9h1.7c1 0 1.9 0.9 1.9 1.9v14.2h14.2c1.3 0.1 2.2 1 2.2 2z"/>
+</svg>

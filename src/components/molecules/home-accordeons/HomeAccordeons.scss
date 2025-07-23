@@ -1,0 +1,117 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-home-accordion__container {
+  .section__title {
+    h2 {
+      font-size: size(17);
+    }
+
+    @include fromy($xx-large) {
+      display: none;
+    }
+  }
+}
+
+.m-home-accordion {
+  margin-top: 32px;
+
+  .a-accordeon-btn {
+    background-color: var(--color-gray-question__charcoal);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+
+    .a-accordeon-btn__title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      column-gap: 8px;
+
+      span {
+        width: 29px;
+        height: 29px;
+        background-color: $white;
+        border-radius: 50%;
+
+        i {
+          font-size: 22px;
+          line-height: 29px;
+          color: $magenta;
+        }
+      }
+
+      h3 {
+        color: var(--color-blackred__white);
+        font-family: $roboto-bold;
+        font-size: size(14);
+      }
+    }
+
+    .a-accordeon-btn__action {
+      border-radius: 50%;
+      transition: background-color 0.2s ease;
+
+      img {
+        width: 20px;
+        height: 20px;
+        filter: var(--filter-none-brightness);
+      }
+
+      &.open-acc {
+        background-color: var(--color-white-dark);
+      }
+    }
+
+    &:hover {
+      .a-accordeon-btn__action {
+        background-color: var(--color-white-dark);
+      }
+    }
+  }
+
+  .a-accordeon-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    padding-bottom: 16px;
+
+    .a-accordeon-item {
+      border-left: 2px solid $magenta;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 8px;
+      padding-right: 12px;
+
+      .a-accordeon-item__content {
+        color: var(--color-blackred__white);
+
+        h4 {
+          font-size: size(13);
+          font-family: $roboto-black;
+          line-height: 18px;
+        }
+
+        p {
+          font-size: size(13);
+          line-height: 18px;
+        }
+      }
+      img {
+        width: 28px;
+        height: 28px;
+        filter: var(--filter-none-invert);
+      }
+    }
+  }
+
+  @include fromy($xx-large) {
+    display: none;
+  }
+}

@@ -1,0 +1,165 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-home-categories-selector {
+    .categories-selector__sidebar {
+        .new_category {
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap; // Permite que se ajusten y se distribuyan en pantallas pequeñas
+
+            @media (max-width: 1024px) {
+                padding: 20px 40px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-wrap: wrap; // Permite que se ajusten y se distribuyan en pantallas pequeñas
+              }
+
+            .subcategory_pyme_colaborativo {
+                flex: 1;
+                margin: 0 10px;
+            }
+
+            h2 {
+                color: var(--color-shadow-white);
+                font-family: $roboto-bold;
+                font-size: size(24);
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            p {
+                color: var(--color-gray_text-white);
+                font-family: $roboto-medium;
+                line-height: 21px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .link_mipyme {
+            color: var(--color-gray_text-white);
+            text-align: center; // Centra todo el contenido dentro del contenedor
+        
+            h2 {
+                // color: var(--color-shadow-white);
+                color: $magenta;
+                font-family: $roboto-bold;
+                font-size: size(20);
+                padding: 20px 0;
+            }
+        
+            button {
+                background-color: $magenta;
+                color: white;
+                font-weight: bold;
+                padding: 0.5rem 1.5rem;
+                border: none;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                padding: 15px;
+        
+                display: inline-block;
+                margin: 0 auto; 
+
+                &:hover {
+                    background-color: $magenta-light
+                  }
+            }
+        }        
+
+        .a-sidebar__title {
+            padding-bottom: 30px;
+        }
+
+        .a-sidebar__categories {
+            display: flex;
+            flex-wrap: wrap; // Para que las tarjetas se ajusten en múltiples filas en pantallas pequeñas
+            justify-content: center; // Centra las tarjetas horizontalmente
+            gap: 20px;
+
+            .category-box {
+                flex: 1 1 300px; // Ajusta el ancho de las tarjetas para que se adapten en pantallas pequeñas
+                max-width: 100%; // Limita el ancho máximo para que no exceda el contenedor
+                margin-bottom: 20px;
+
+                .accordion {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 350px; // Ancho máximo para la tarjeta
+                    height: auto;
+                    min-height: 250px; // Asegura una altura mínima para las tarjetas
+                    color: $white;
+                    border: 1px solid $magenta;
+                    border-radius: 8px 8px 0 0;
+                    padding: 15px;
+                    cursor: pointer;
+                    background-color: var(--color-f8-gray__azabache);
+                    position: relative;
+                    margin: 0 auto;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 6px;
+                        background-color: $magenta;
+                    }
+
+                    .category-icon {
+                        margin-bottom: 15px;
+                        width: 47px;
+                        height: 47px;
+                        background-color: $zinc;
+                        border-radius: 50%;
+                        padding: 8px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            font-size: size(33);
+                        }
+                    }
+
+                    p {
+                        font-family: $roboto-black;
+                        color: var(--color-shadow-white);
+                        font-size: size(24);
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+                .accordion-content {
+                    padding: 10px 0;
+
+                    .a-subcategories__text {
+                        color: var(--color-gray_text-white);
+                        font-family: $roboto-medium;
+                        line-height: 21px;
+                        padding-top: 10px;
+                        margin-bottom: 10px;
+                    }
+
+                    .a-subcategories__list {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        column-gap: 20px;
+                        row-gap: 16px;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-banner-search {
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 272px; // Altura ajustada para pantallas grandes
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .m-banner-search-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 1200px; // Limitar el ancho máximo en pantallas grandes
+    padding: 0 20px; // Padding para mantener la consistencia
+
+    .image_logo_pyme {
+      display: flex;
+      justify-content: center;
+      width: 40%; // Ajuste para que el logo se vea proporcionado en pantallas grandes
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .search-bar-container {
+      width: 100%; 
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+
+      input {
+        max-width: 600px; // Limitar el ancho de la barra de búsqueda
+        width: 100%;
+      }
+    }
+  }
+
+  @include fromy($large) {
+    height: 272px; // Altura para pantallas grandes
+  }
+
+  // Media query para pantallas medianas
+  @media (max-width: 768px) {
+    height: 160px;
+
+    .m-banner-search-container {
+      .image_logo_pyme {
+        width: 50%; 
+      }
+
+      .search-bar-container {
+        width: 95%;
+      }
+    }
+  }
+
+  // Media query para pantallas pequeñas
+  @media (max-width: 480px) {
+    height: 140px;
+
+    .m-banner-search-container {
+      .image_logo_pyme {
+        width: 60%;
+      }
+
+      .search-bar-container {
+        width: 100%;
+      }
+    }
+  }
+}

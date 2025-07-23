@@ -1,0 +1,47 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.a-subcategories-box {
+  background-color: transparent; /* Fondo transparente */
+  border-radius: 0; /* Sin bordes redondeados */
+  box-shadow: none; /* Sin sombra */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinear a la izquierda */
+  max-width: 233px;
+  width: 100%;
+  height: auto; /* Ajustar altura automáticamente */
+  padding: 10px; /* Espaciado interno */
+  position: relative;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-hover-result-item); /* Cambio de color en hover */
+    cursor: pointer; /* Cambia el cursor a puntero */
+  }
+
+  .line {
+    width: 2px;
+    height: 42px;
+    position: absolute;
+    left: 10px;
+    // top: 11px;
+    background-color: var(--color-magenta); /* Color de la línea */
+  }
+
+  h3 {
+    color: var(--color-blackred__white);
+    padding-left: 15px; /* Espacio para que el texto no esté pegado a la línea */
+    font-family: $roboto-bold;
+    font-size: size(17);
+    line-height: 23px;
+    text-decoration: none; /* Sin subrayado */
+  }
+
+  i {
+    font-size: size(28);
+    color: #303030;
+    filter: var(--filter-none-brightness);
+  }
+}

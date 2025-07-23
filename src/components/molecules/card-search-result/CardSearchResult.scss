@@ -1,0 +1,74 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-card-search-result {
+  background-color: var(--color-card-bg);
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px #0000001f;
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  height: 324px;
+  overflow: hidden;
+
+  .card-image {
+    height: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-data {
+    padding: 19px 18px 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .card-data__category {
+      border-left: 2px solid;
+      font-family: $roboto-bold;
+      font-size: size(15);
+      line-height: 20px;
+      padding-left: 4px;
+      margin-bottom: 7px;
+    }
+
+    .card-data__title {
+      color: var(--color-blackred__white);
+      font-family: $roboto-bold;
+      font-size: size(15);
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+
+    .card-data__description {
+      color: var(--color-blackred__white);
+      font-size: size(13);
+      line-height: 18px;
+    }
+
+    .card-data__cta {
+      color: $magenta;
+      display: flex;
+      border: 2px solid $magenta;
+      border-radius: 4px;
+      font-family: $roboto-bold;
+      height: 42px;
+      justify-content: center;
+      align-items: center;
+      margin-top: auto;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: $magenta;
+        color: $white;
+      }
+    }
+  }
+
+  @include fromy($xx-large) {
+    width: 308px;
+    height: 349px;
+  }
+}

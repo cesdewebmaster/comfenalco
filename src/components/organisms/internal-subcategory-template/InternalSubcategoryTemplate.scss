@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.o-internal-subcategory-template {
+  background-color: var(--color-white-onyx);
+  // padding-top: 32px;
+
+  @include fromy($large) {
+    padding-top: 0;
+
+    .tree-and-section {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      column-gap: 99px;
+      height: 1179px;
+    }
+  }
+
+  .m-tree-desktop {
+    display: none;
+
+    @include fromy($large) {
+      display: block;
+    }
+  }
+}

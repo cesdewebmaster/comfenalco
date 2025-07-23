@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas <CardSearchResult /> should be match with snapshot 1`] = `
+<div>
+  <div
+    class="m-card-search-result"
+  >
+    <div
+      class="card-image"
+      style="background-image: url(//images.ctfassets.net/0s9sb7ld7kac/5TRR4gy7orEGamtOqRAjFN/6ea6749c55e08e60b0b8f0ff5d174236/afiliaciones.png);"
+    />
+    <div
+      class="card-data"
+    >
+      <h3
+        class="card-data__category"
+        style="color: rgb(0, 123, 114); border-left-color: #007B72;"
+      >
+        Afiliaciones
+      </h3>
+      <h4
+        class="card-data__title"
+      >
+        Afilíate como independiente
+      </h4>
+      <p
+        class="card-data__description"
+      >
+        Texto de introducción rápida al servicio ofrecido para personas y familias o empresas
+      </p>
+      <a
+        aria-label="Enlace a Afilíate como independiente"
+        class="card-data__cta"
+        href="/afiliaciones/afiliacion-independiente"
+      >
+        Saber más
+      </a>
+    </div>
+  </div>
+</div>
+`;

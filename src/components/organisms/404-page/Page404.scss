@@ -1,0 +1,101 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-not-found-page {
+  background-color: var(--color-white-black);
+  height: calc(100vh - 88px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .m-not-found-page__container {
+    max-width: 1089px;
+
+    .box-1 {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: size(23);
+        font-family: $roboto-black;
+        color: var(--color-charcoal-white);
+      }
+
+      p {
+        margin-top: 24px;
+        line-height: 1.25;
+        color: var(--color-blackred-light__white);
+      }
+
+      img {
+        margin-top: 24px;
+        max-height: 268px;
+        align-self: center;
+      }
+
+      .a-btn-container {
+        margin-top: 40px;
+
+        a {
+          color: $magenta;
+          font-family: $roboto-bold;
+          font-size: size(14);
+          letter-spacing: 0.02px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 177px;
+          height: 55px;
+          border-radius: 2px;
+          border: 2px solid $magenta;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .box-2 {
+      display: none;
+    }
+  }
+
+  @include fromy($x-large) {
+    height: calc(100vh - 100px);
+
+    .m-not-found-page__container {
+      display: flex;
+      align-items: center;
+      column-gap: 117px;
+
+      .box-1 {
+        h2 {
+          font-size: size(45);
+          color: var(--color-charcoal-white);
+        }
+
+        p {
+          margin-top: 40px;
+          font-size: size(25);
+          line-height: 1.12;
+        }
+
+        img {
+          display: none;
+        }
+        .a-btn-container {
+          a {
+            width: 185px;
+            height: 48px;
+            font-size: size(16);
+            margin: 0;
+          }
+        }
+      }
+
+      .box-2 {
+        display: block;
+        max-height: 431px;
+      }
+    }
+  }
+}

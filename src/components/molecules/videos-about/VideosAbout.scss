@@ -1,0 +1,134 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/theme.scss";
+
+.m-videos-about-container {
+  background-color: var(--color-gray-black);
+}
+
+.m-videos-about {
+  padding: 41px 14px 48px;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @include fromy($large) {
+    padding: 59px 14px 58px;
+  }
+
+  .m-videos-about__title-box {
+    color: var(--color-blackred__white);
+    padding-left: 18px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-color: $magenta;
+      position: absolute;
+      width: 2px;
+      height: 43px;
+      top: 0;
+      left: 0;
+    }
+
+    h4 {
+      font-family: $roboto-black;
+      font-size: size(19);
+      line-height: 25px;
+      color: var(--color-charcoal-white);
+    }
+
+    p {
+      font-size: size(15);
+      line-height: 20px;
+      margin-top: 2px;
+    }
+  }
+
+  .m-box-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 21px;
+    column-gap: 32px;
+    margin-top: 8px;
+
+    @include fromy($medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    @include fromy($large) {
+      margin-top: 32px;
+    }
+
+    .a-box-video,
+    .a-box-reference {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: clamp(184px, 100%, 280px);
+      width: clamp(347px, 100%, 530px);
+      aspect-ratio: 16 / 9;
+      padding: 18px;
+      position: relative;
+
+      .icon-play-circle {
+        font-family: "comfama" !important;
+        color: #fff;
+        font-size: 39px;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include fromy($large) {
+          font-size: 60px;
+        }
+      }
+
+      p {
+        color: #fff;
+        font-size: size(16);
+        font-family: $roboto-bold;
+        line-height: 28px;
+        width: 70%;
+
+        @include fromy($large) {
+          font-size: size(26);
+        }
+      }
+    }
+
+    .a-box-reference {
+      p:last-of-type {
+        font-size: size(10);
+        font-family: $roboto-medium;
+        line-height: 22px;
+        margin-top: 10px;
+
+        @include fromy($large) {
+          font-size: size(16);
+        }
+      }
+      img {
+        position: absolute;
+        bottom: 18px;
+        right: 23px;
+        width: 16px;
+        height: auto;
+
+        @include fromy($large) {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
